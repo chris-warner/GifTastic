@@ -1,4 +1,23 @@
-button {
-    width: 100px;
-    height: 50px;
-}
+    button {
+        width: 100px;
+        height: 50px;
+        margin-left: 6px;
+    }
+    
+    #button-div {
+        border: black;
+        border-style: solid;
+        border-width: .8px;
+    }
+    
+    #gif-div {
+        border: black;
+        border-style: solid;
+        border-width: .8px;
+    }
+    
+    .flex-container {
+        display: flex;
+        flex-wrap: nowrap;
+        background-color: DodgerBlue;
+    }
