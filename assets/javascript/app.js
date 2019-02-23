@@ -11,6 +11,7 @@ $(document).ready(function() {
     function populateButtons(inputarray) {
         for (var i = 0; i < inputarray.length; i++) {
             $("#button-div").append("<button id =" + "'" + "btn" + i + "'" + ">" + buttonCategories[i] + "</button>");
+            $("#button-div").append("<button>" + "Clear" + "</button>");
             dynamicButtons.push("btn" + i);
         }
         //2.Log the button names fot testing.
