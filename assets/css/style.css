@@ -1,29 +1,49 @@
-    button {
-        width: 100px;
-        height: 50px;
-        margin-left: 6px;
-    }
-    
-    #button-div {
-        border: black;
-        border-style: solid;
-        border-width: .8px;
-    }
-    
-    #gif-div {
-        border: black;
-        border-style: solid;
-        border-width: .8px;
-    }
-    
-    .flex-container {
-        display: flex;
-        flex-wrap: wrap;
-        background-color: DodgerBlue;
-    }
-    
-    img {
-        max-width: 400px;
-        max-height: 200px;
-        margin: 10px;
-    }
+button {
+    width: 100px;
+}
+
+.row {
+    display: flex;
+    flex-wrap: wrap;
+    padding: 0 4px;
+}
+
+
+/* Create two equal columns that sits next to each other */
+
+.column {
+    flex: 50%;
+    padding: 0 4px;
+}
+
+.column img {
+    margin-top: 8px;
+    vertical-align: middle;
+}
+
+img.animated-gif {
+    width: 120px;
+    height: auto;
+}
+
+#addAnimal-div {
+    width: 400px;
+    float: right;
+    margin-top: 5%;
+}
+
+button {
+    margin: auto;
+    margin: 4px 4px 4px 4px;
+    color: white;
+    background-color: green;
+}
+
+#btnAdd-animal {
+    margin: 4px 0px 0px 0px;
+    color: white;
+}
+
+#animal-text {
+    width: 300px;
+}
