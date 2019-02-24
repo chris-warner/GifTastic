@@ -23,16 +23,15 @@ $(document).ready(function() {
     }
 
     $('#button-div').on('click', 'button', function() {
-        // do something here
+
         cleargifs();
-        alert($(this).text());
-        if ($(this).text() != "clear" && $(this).text() != "Add Animal") {
+        if ($(this).text() != "Submit") {
             searchTerm = $(this).text();
             populateImages(searchTerm);
-        } else if ($(this).text() != "Add Animal") {
+        } else if ($(this).text() != "Submit") {
             cleargifs();
         }
-        if ($(this).text() === "Add Animal") {
+        if ($(this).text() === "Submit") {
             custom_searchTerm = $("#animal-text").val().trim();
             var test = $("<button>" + custom_searchTerm + "</button>");
             $("#button-div").append(test);
@@ -41,12 +40,6 @@ $(document).ready(function() {
         }
     });
 
-    $("button").on("click", function() {
-
-    });
-    $('.buttons').on('click', 'button', function() {
-        // do something here
-    });
 
     function populateImages(queryString) {
         //Take the input string and search giffy for related gifs.
