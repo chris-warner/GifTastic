@@ -4,7 +4,10 @@
         
         #addAnimal-div {
             width: 100%;
-            margin: auto;
+        }
+        
+        form {
+            margin-top: 6px;
         }
         
         #animal-text {
@@ -16,6 +19,7 @@
         .pAnimal {
             color: white;
             margin-left: 4px;
+            margin-top: 10px;
         }
         
         .container {
@@ -58,7 +62,7 @@
         
         img {
             margin: auto;
-            border: 1px solid black;
+            border: 1px solid white;
             border-radius: 4px;
             padding: 5px;
             width: 200px;

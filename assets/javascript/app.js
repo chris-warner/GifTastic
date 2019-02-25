@@ -2,14 +2,13 @@ var apiKey = "&api_key=JqrEkMGSAzAKM3HxZtFci1lQzrkd5Db3";
 var buttonCategories = ["dog", "cat", "rabbit", "hamster", "skunk", "goldfish", "bird", "ferret", "tuttle", "sugar glider", "chinchilla", "hedgehog", "hermit crab", "gerbil", "pygmy goat", "chicken", "capbara", "teacup pig", "serval", "salamander", "frog"];
 var dynamicButtons = [];
 var searchTerm;
-var custom_searchTerm;
 var custom_buttonCategories = [];
-var gTable = document.getElementById("gif-table");
 
 $(document).ready(function() {
 
     //1.Populate buttons!
     populateButtons(buttonCategories);
+    $("#gif-div").hide();
 
     function populateButtons(inputarray) {
         //Generate buttons for each item in my array of search terms.
@@ -17,24 +16,20 @@ $(document).ready(function() {
             $("#button-div").append("<button id =" + "'" + "btn" + i + "'" + ">" + buttonCategories[i] + "</button>");
             dynamicButtons.push("btn" + i);
         }
-        //2.Log the button names fot testing.
-        for (var b = 0; b < dynamicButtons.length; b++) {
-            console.log(dynamicButtons[b]);
-        }
     }
     //if a button is clicked we want to pull up related gifs.
     $('#button-div').on('click', 'button', function() {
         cleargifs();
         searchTerm = $(this).text();
         populateImages(searchTerm);
+        $("#gif-div").show();
     });
+
     $('#addAnimal-div').on('click', 'button', function() {
-        custom_searchTerm = $("#animal-text").val().trim();
+        var custom_searchTerm = $("#animal-text").val().trim();
         var test = $("<button>" + custom_searchTerm + "</button>");
         $("#button-div").append(test);
     });
-
-
 
     //If a gif is clicked, we want to freeze it.
     $('#gif-div').on('click', 'img', function() {
@@ -55,7 +50,6 @@ $(document).ready(function() {
 
         }
     });
-
 
     function populateImages(queryString) {
         //Take the input string and search giphy for related gifs.
