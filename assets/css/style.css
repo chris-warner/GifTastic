@@ -1,49 +1,76 @@
-button {
-    width: 100px;
-}
-
-.row {
-    display: flex;
-    flex-wrap: wrap;
-    padding: 0 4px;
-}
-
-
-/* Create two equal columns that sits next to each other */
-
-.column {
-    flex: 50%;
-    padding: 0 4px;
-}
-
-.column img {
-    margin-top: 8px;
-    vertical-align: middle;
-}
-
-img.animated-gif {
-    width: 120px;
-    height: auto;
-}
-
-#addAnimal-div {
-    width: 400px;
-    float: right;
-    margin-top: 5%;
-}
-
-button {
-    margin: auto;
-    margin: 4px 4px 4px 4px;
-    color: white;
-    background-color: green;
-}
-
-#btnAdd-animal {
-    margin: 4px 0px 0px 0px;
-    color: white;
-}
-
-#animal-text {
-    width: 300px;
-}
+        button {
+            width: 100px;
+        }
+        
+        #addAnimal-div {
+            width: 400px;
+            float: right;
+            margin-top: 10%;
+        }
+        
+        .container {
+            max-width: 980px;
+            margin: auto;
+            border: 1px solid #dddddd;
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: cover;
+            height: 100%;
+            min-height: 100vh;
+        }
+        
+        #button-div,
+        .search-area,
+        .favorite,
+        #gif-div,
+        #favorite-area {
+            width: 100%;
+            background-color: white;
+            margin-top: 10px;
+            border: 1px solid black;
+            border-radius: 5px;
+            flex-wrap: wrap;
+        }
+        
+        button {
+            margin: auto;
+            margin: 4px 4px 4px 4px;
+            color: white;
+            background-color: green;
+        }
+        
+        #btnAdd-animal {
+            margin: 4px 0px 0px 0px;
+            color: white;
+        }
+        
+        img {
+            margin: auto;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+            padding: 5px;
+            width: 200px;
+            height: 200px;
+        }
+        
+        button:active {
+            background-color: darkgreen;
+        }
+        
+        .animal-info {
+            padding-top: 10px;
+            margin-right: 10px;
+            margin-bottom: 10px;
+        }
+        
+        figure {
+            float: right;
+            width: 30%;
+            text-align: center;
+            font-style: italic;
+            font-size: smaller;
+            text-indent: 0;
+            border: thin silver solid;
+            margin: 0.5em;
+            padding: 0.5em;
+        }
