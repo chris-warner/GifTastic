@@ -53,7 +53,7 @@ $(document).ready(function() {
 
     function populateImages(queryString) {
         //Take the input string and search giphy for related gifs.
-        var queryURL = "http://api.giphy.com/v1/gifs/search?q=" + queryString + apiKey;
+        var queryURL = "https://api.giphy.com/v1/gifs/search?q=" + queryString + apiKey;
         var gifurl;
         $.ajax({
             url: queryURL,
